@@ -11,9 +11,6 @@ buildScan {
     publishOnFailure()
 }
 
-// Run the application
-npm_start.dependsOn(npm_install)
-
 // Clean the node_modules directory
 task npm_clean(type: Delete) {
     delete 'node_modules'

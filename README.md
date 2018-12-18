@@ -19,7 +19,9 @@ If during the course of development you need to clear the `node_modules` directo
 ## Packaging the Example
 Run the following command to package the example as a native electron application:
 
-    TBD
+    ./gradlew npm_build
+
+This command will create an installer in the `dist` folder. By default the build command will only generate an installer for the current platform and architecture.
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/electron-gradle-example/issues).

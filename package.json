@@ -1,0 +1,22 @@
+{
+  "name": "electron-gradle-example",
+  "version": "0.1.0",
+  "description": "Example of building an Electron application using Gradle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregwhitaker/electron-gradle-example.git"
+  },
+  "author": "Greg Whitaker",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gregwhitaker/electron-gradle-example/issues"
+  },
+  "homepage": "https://github.com/gregwhitaker/electron-gradle-example#readme",
+  "devDependencies": {
+    "electron": "^3.0.13"
+  }
+}

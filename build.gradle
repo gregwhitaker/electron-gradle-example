@@ -1,8 +1,9 @@
-
 plugins {
-    id 'com.gradle.build-scan' version '2.0.2'
+    id 'com.gradle.build-scan' version '1.16'
     id 'net.saliman.properties' version '1.4.6'
-    id 'com.github.hierynomus.license' version '0.14.0'
+    id 'com.moowork.node' version '1.2.0'
+    id 'idea'
+    id 'base'
 }
 
 buildScan {
@@ -11,19 +12,13 @@ buildScan {
     publishOnFailure()
 }
 
-allprojects {
-    apply plugin: 'idea'
-    apply plugin: 'com.github.hierynomus.license'
-    apply plugin: 'net.saliman.properties'
+// Build the application
+build.dependsOn(npm_install)
 
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
+// Run the application
+npm_start.dependsOn(build)
 
-    license {
-        header rootProject.file('codequality/HEADER')
-        strictCheck true
-        excludes([ "**/*.json", "**/*.html" ])
-    }
+// Clean the node_modules directory
+task npm_clean(type: Delete) {
+    delete 'node_modules'
 }

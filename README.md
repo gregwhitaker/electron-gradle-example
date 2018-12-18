@@ -5,10 +5,21 @@ An example of building and packaging an [Electron](https://electronjs.org/) appl
 ## Building the Example
 Run the following command to build the example application:
 
-    ./gradlew clean build
+    ./gradlew npm_install
 
 ## Running the Example
-TBD
+Run the following command to start the example application during development:
+
+    ./gradlew npm_start
+    
+If during the course of development you need to clear the `node_modules` directory, run the following command:
+
+    ./gradlew npm_clean
+
+## Packaging the Example
+Run the following command to package the example as a native electron application:
+
+    TBD
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/electron-gradle-example/issues).

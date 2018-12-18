@@ -3,7 +3,6 @@ plugins {
     id 'net.saliman.properties' version '1.4.6'
     id 'com.moowork.node' version '1.2.0'
     id 'idea'
-    id 'base'
 }
 
 buildScan {
@@ -12,11 +11,8 @@ buildScan {
     publishOnFailure()
 }
 
-// Build the application
-build.dependsOn(npm_install)
-
 // Run the application
-npm_start.dependsOn(build)
+npm_start.dependsOn(npm_install)
 
 // Clean the node_modules directory
 task npm_clean(type: Delete) {

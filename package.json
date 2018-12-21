@@ -21,7 +21,6 @@
   "homepage": "https://github.com/gregwhitaker/electron-gradle-example#readme",
   "build": {
     "appId": "yourappid",
-    "category": "your.app.category.type",
     "dmg": {
       "contents": [
         {
